@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+header {
+    margin: 0;
+    height: 20dvh;
+    max-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: "Monteserrat", sans-serif;
+    font-weight: 700;
+    color: #38a5aa;
+}
+
+header > img {
+    width: 20dvh;
+    max-width: 80px;
+    margin-right: 10px;
+}
+
+main {
+    height: 100dvh;
+    font-family: "Inter", sans-serif;
+}
+
+main > form {
+    display: flex;
+    justify-content: center;
+    padding-top: 10dvh;
+}
+
+main > form > input {
+    margin-right: 20px;
+    height: 50px;
+    width: 50%;
+    max-width: 400px;
+    border: 3px solid #38a5aa;
+    border-radius: 10px;
+    text-align: center;
+    font-size: medium;
+}
+
+main > form > button {
+    color: #38a5aa;
+    border: 3px solid #38a5aa;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.db-note {
+    text-align: center;
+    color: grey;
+    font-weight: 200;
+    font-size: small ;
+}
+
+.ingredient-list {
+    margin-left: 80px;
+}
+
+li {
+    margin: 5px 0;
+    font-size: larger;
+    color: #38a5aa;
+}
+
+li > button {
+    color: #111111;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.delete-ingredient-btn {
+    background-color: whitesmoke;
+    border: none;
+}
+
+.center-gen-form{
+    margin: 50px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.generation-form {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border: 2px solid #38a5aa;
+    border-radius: 20px;
+    height: 90px;
+    color: #111111;
+    font-size: 15px;
+    max-width: 550px;
+    text-align: center;
+}
+
+.warning {
+    color: red;
+    text-align: center;
+}
+
+.verticle-line {
+    width: 2px;
+    height: 60px;
+    background-color: #38a5aa;
+    margin-left: 10px;
+}
+
+.response{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
