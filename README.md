@@ -1,19 +1,36 @@
-# React + Vite
+# AAIC - Your Cooking AI Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+AAIC is a small React web app that turns the ingredients you have on hand into a recipe. Add your ingredients, hit **Generate a response**, and an AI (Google Gemini) writes you a recipe.
 
-Currently, two official plugins are available:
+![AAIC logo](./images/AAIC_logo.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Add ingredients** one at a time with the input field
+- **Double-click** an ingredient to remove it
+- **Minimum of 3 ingredients** required before generating a recipe
+- **AI-generated recipes** powered by the Google Gemini API
+- **Error handling** for when the AI is overloaded (503) or something unexpected happens
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Tech Stack
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Google Gen AI SDK](https://www.npmjs.com/package/@google/genai) (`@google/genai`)
 
-## Expanding the Oxlint configuration
+## Access the Website
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+You can use the app here: [LINK_HERE](https://aaic-assistant.netlify.app/)
+
+## How It Works
+
+1. Type an ingredient (e.g. `Eggs`) and click **+ Add Ingredient**.
+2. Repeat until you have at least 3 ingredients.
+3. Click **Generate a response**.
+4. The app sends your ingredients to Gemini and displays the recipe it returns.
+
+If the Gemini API is under high demand, the app shows a friendly error message and you can try again a bit later.
+
+## Contributing
+
+Suggestions and pull requests are welcome. Feel free to open an issue to discuss what you'd like to change.

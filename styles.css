@@ -41,6 +41,7 @@ main > form > input {
     border: 3px solid #38a5aa;
     border-radius: 10px;
     text-align: center;
+    font-family: inherit;
     font-size: medium;
 }
 
@@ -49,17 +50,22 @@ main > form > button {
     border: 3px solid #38a5aa;
     border-radius: 10px;
     background-color: white;
+    font-family: inherit;
 }
 
 .db-note {
     text-align: center;
     color: grey;
+    font-family: inherit;
     font-weight: 200;
     font-size: small ;
 }
 
 .ingredient-list {
-    margin-left: 80px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    font-family: inherit;
 }
 
 li {
@@ -94,6 +100,7 @@ li > button {
     border-radius: 20px;
     height: 90px;
     color: #111111;
+    font-family: inherit;
     font-size: 15px;
     max-width: 550px;
     text-align: center;
@@ -102,6 +109,7 @@ li > button {
 .warning {
     color: red;
     text-align: center;
+    font-family: inherit;
 }
 
 .verticle-line {

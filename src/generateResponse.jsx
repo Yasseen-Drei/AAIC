@@ -5,6 +5,7 @@ export default function GenerateResponse(props) {
         color : "black",
         borderColor : "#38a5aa",
         borderRadius : "10px",
+        width: "142px",
         height : "60px",
         marginLeft : "10px"
     }
@@ -35,7 +36,7 @@ export default function GenerateResponse(props) {
                     style={props.ingredientsLength > 2 ? availableStyle : unavailableStyle}
                     onClick={handleClick}
                 >
-                    Generate a response
+                    {props.tryAgain ? "Try Again" : "Generate a response"}
                 </button>
             </section>
         </div>

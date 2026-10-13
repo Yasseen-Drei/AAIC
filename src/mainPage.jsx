@@ -11,8 +11,12 @@ export default function Main() {
     const [showResponse, setShowResponse] = useState(false)
     const [response, setResponse] = useState("")
     const [received, setReceived] = useState(false)
+    const [tryAgain, setTryAgain] = useState(false)
     
     function addIngredient(formData) {
+        setShowResponse(false)
+        setReceived(false)
+        setTryAgain(false)
         const newIngredient = formData.get("ingredient")
         if (newIngredient === "") return 0
         setIngredients((prev) => [...prev, newIngredient])
@@ -20,6 +24,9 @@ export default function Main() {
     }
 
     function removeIngredient(key) {
+        setShowResponse(false)
+        setReceived(false)
+        setTryAgain(false)
         setIngredients((prev) => {
             return prev.filter((ingredient) => ingredient !== key)
         })
@@ -41,6 +48,7 @@ export default function Main() {
     }
 
     function responseInterval() {
+        setTryAgain(true)
         setTimeout(() => {
             setShowResponse(false)
             setReceived(false)
@@ -59,6 +67,7 @@ export default function Main() {
                 warning={warning}
                 setWarning={setWarning}
                 getResponse={getResponse}
+                tryAgain={tryAgain}
             />
             {showResponse && <Response 
                 response={response}
