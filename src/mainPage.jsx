@@ -33,7 +33,7 @@ export default function Main() {
     }
 
     async function getResponse() {
-        if(!response){
+        if(!showResponse){
             setShowResponse(true)
             const tempResponse = await generateAIResponse(ingredients)
             setReceived(true)

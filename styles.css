@@ -134,6 +134,9 @@ li > button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 550px;
 }
 
 .response > img {
