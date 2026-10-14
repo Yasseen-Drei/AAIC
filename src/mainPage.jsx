@@ -33,18 +33,20 @@ export default function Main() {
     }
 
     async function getResponse() {
-        setShowResponse(true)
-        const tempResponse = await generateAIResponse(ingredients)
-        setReceived(true)
-        if (tempResponse === "ERROR503") {
-            setResponse("The AI is experiencing high demand right now please try again later")
-            responseInterval()
+        if(!response){
+            setShowResponse(true)
+            const tempResponse = await generateAIResponse(ingredients)
+            setReceived(true)
+            if (tempResponse === "ERROR503") {
+                setResponse("The AI is experiencing high demand right now please try again later")
+                responseInterval()
+            }
+            else if (tempResponse === "err"){
+                setResponse("Unexpected error please try again later")
+                responseInterval()
+            }
+            else setResponse(tempResponse)
         }
-        else if (tempResponse === "err"){
-            setResponse("Unexpected error please try again later")
-            responseInterval()
-        }
-        else setResponse(tempResponse)
     }
 
     function responseInterval() {
