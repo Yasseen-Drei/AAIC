@@ -25,20 +25,23 @@ export default function GenerateResponse(props) {
     }
 
     return (
-        <div className="center-gen-form">
-            <section className="generation-form">
-                <div>
-                    <p>You need to have atleast 3 ingredients to generate</p>
-                    {props.warning && <p className="warning"> *** You only have {props.ingredientsLength} ingredient/s</p>}
-                </div>
-                <div className="verticle-line"></div>
-                <button
-                    style={props.ingredientsLength > 2 ? availableStyle : unavailableStyle}
-                    onClick={handleClick}
-                >
-                    {props.tryAgain ? "Try Again" : "Generate a response"}
-                </button>
-            </section>
-        </div>
+        <>
+            <div className="center-gen-form">
+                <section className="generation-form">
+                    <div>
+                        <p>You need to have atleast 3 ingredients to generate</p>
+                        {props.warning && <p className="warning"> *** You only have {props.ingredientsLength} ingredient/s</p>}
+                    </div>
+                    <div className="verticle-line"></div>
+                    <button
+                        style={props.ingredientsLength > 2 ? availableStyle : unavailableStyle}
+                        onClick={handleClick}
+                    >
+                        {props.tryAgain ? "Try Again" : "Generate a response"}
+                    </button>
+                </section>
+            </div>
+            <span className="ai-name">Powered by Gemeni AI 3.8 flash</span>
+        </>
     )
 }

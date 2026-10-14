@@ -119,6 +119,16 @@ li > button {
     margin-left: 10px;
 }
 
+.ai-name {
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+    color: grey;
+    font-family: inherit;
+    font-weight: 200;
+    font-size: small;
+}
+
 .response{
     display: flex;
     flex-direction: column;
