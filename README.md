@@ -3,6 +3,10 @@
 AAIC is a small React web app that turns the ingredients you have on hand into a recipe. Add your ingredients, hit **Generate a response**, and an AI (Google Gemini) writes you a recipe.
 
 ![AAIC logo](./images/AAIC_logo.png)
+![AAIC webpage screenshot 1](./images/ss1.png)
+![AAIC webpage screenshot 2](./images/ss2.png)
+![AAIC webpage screenshot 3](./images/ss3.png)
+
 
 ## Features
 
